@@ -1,0 +1,12 @@
+<div class="mdl-card stock-card mdl-shadow--2dp" [ngClass]="{increase:isPositive(), decrease:isNegative()}">
+    <div class="card" style="width: 18rem;">
+        <img src="{{rocket.flickr_images[0]}}"  class="card-img-top" width="250" alt="{{rocket.name}}"/>
+        <div class="card-body">
+          <h5 class="card-title">{{rocket.name}}</h5>
+          <p class="card-text">Altura : {{rocket.height}}</p>
+          <p class="card-text">Pais: {{rocket.country}}</p>
+          <button type="button" class="btn btn-light" [routerLink]="['/create',id]"><img src="../../../assets/note-task-comment-message-edit-write_108613.png" height="20px" width="20px" />Edit</button>
+          <button type="button" class="btn btn-light" (click)="deleteRocket()"><img src="../../../assets/trash-can_115312.png" height="20px" width="20px" /> Delete</button>
+        </div>
+      </div>
+</div>
